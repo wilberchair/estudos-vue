@@ -4,6 +4,8 @@
   <p v-once>{{ titulo }}</p>
   <p>{{ saudacao() }}</p>
   <a v-bind:href="link">Google</a>
+  <hr>
+  <p v-html='linkHtml'></p>
 </div>
 
 <script>
@@ -11,7 +13,8 @@
     el: '#app',
     data: {
       titulo: 'Usando VueJS2',
-      link: 'https:www.google.com'
+      link: 'https:www.google.com',
+      linkHtml: '<a href="https:www.google.com">Google</a>'
     },
     methods: {
       saudacao() {
