@@ -2,6 +2,17 @@
 
 <div id="app">
   <p>{{ titulo }}</p>
+  <!-- <input type="text" v-bind:value="titulo" //forma mais dificul de fazer o two way data binding
+  v-on:input="titulo = $event.target.value"> -->
+
+  <!-- two way data binding - bind de duas direções. Com o v-bind eu faço o bind de uma direção, do js pro html
+  quando uso o v-on pego um evento que aconteceu no html e posso fazer alguma coisa pra atualizar os dados
+  na minha instância, e quando uso o v-model faço nos dois sentidos, muito mais simples!  -->
+
+  <!-- garantimos isso com o v-model -->
+  <!-- é uma via de duas mãos, a partir do template atualiza o dado, que está na instancia do vue, e o que
+  for atualizado na instância do vue gera impacto atualizando o template -->
+  <input type="text" v-model="titulo">
 </div>
 
 <script>
